@@ -1,13 +1,20 @@
 import dash
 import dash_html_components as html
 import music_component
+external_stylesheets = ["https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css"]
 
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 
 app.layout = html.Div([
     music_component.MusicComponent(),
-    html.Div(id='output')
+    html.Div(id='output'),
+    html.A(
+        className="github-fork-ribbon",
+        href="https://github.com/mhannani/ggm",
+        title="Fork me on GitHub",
+        children="Fork me on GitHub"
+    )
 ])
 
 if __name__ == '__main__':
