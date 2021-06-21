@@ -1,0 +1,7 @@
+include music_component/music_component.min.js
+include music_component/music_component.min.js.map
+include music_component/metadata.json
+include music_component/package-info.json
+include README.md
+include LICENSE
+include package.json
