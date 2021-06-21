@@ -6,6 +6,7 @@ import flask
 
 external_stylesheets = ["https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css"]
 
+# serving local files
 css_directory = os.getcwd()
 stylesheets = ['app.css']
 static_css_route = '/assets/'
