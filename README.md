@@ -45,7 +45,7 @@ If you have selected install_dependencies during the prompt, you can skip this p
         ```
     2. Run and modify the `usage.py` sample dash app:
         ```
-        $ python usage.py
+        $ python app.py
         ```
 - Write tests for your component.
     - A sample test is available in `tests/test_usage.py`, it will load `usage.py` and you can then automate interactions with selenium.
