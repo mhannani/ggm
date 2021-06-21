@@ -2,7 +2,7 @@
 /[!.]*
 /.?*
 
-# Except the Cloud Function files we want to deploy
+# Except the Cloud files we want to deploy
 !/requirements.txt
 !/music_component
 !/Dockerfile
