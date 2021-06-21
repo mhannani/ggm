@@ -1,4 +1,4 @@
-# music component
+# ggm 
 
 music component is a Dash component library.
 
