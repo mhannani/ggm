@@ -6,5 +6,6 @@
 !/requirements.txt
 !/music_component
 !/Dockerfile
+!/app.py
 
 #!include:.gitignore
