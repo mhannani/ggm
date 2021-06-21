@@ -4,6 +4,7 @@ import music_component
 
 app = dash.Dash(__name__)
 
+
 app.layout = html.Div([
     music_component.MusicComponent(),
     html.Div(id='output')
