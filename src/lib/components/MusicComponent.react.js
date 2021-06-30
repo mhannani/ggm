@@ -9,12 +9,60 @@ import PropTypes from 'prop-types';
  */
 const audioList1 = [
   {
-    name: 'name',
-    singer: 'singer name',
+    name: "Gnaoua sample 1",
+    singer: 'waveGAN\'s music',
     cover:
-      'http://res.cloudinary.com/alick/image/upload/v1502689731/Despacito_uvolhp.jpg',
+      'https://i.pinimg.com/736x/23/87/95/238795d126e72d3ef0fcb17500fd6753.jpg',
     musicSrc:
-      'http://res.cloudinary.com/alick/video/upload/v1502689683/Luis_Fonsi_-_Despacito_ft._Daddy_Yankee_uyvqw9.mp3',
+      'https://ggm.mhannani.codes/assets/generated_audios/generated_1.wav',
+  },
+    {
+    name: "Gnaoua sample 2",
+    singer: 'waveGAN\'s music',
+    cover:
+      'https://i.pinimg.com/736x/23/87/95/238795d126e72d3ef0fcb17500fd6753.jpg',
+    musicSrc:
+      'https://ggm.mhannani.codes/assets/generated_audios/generated_2.wav',
+  },
+    {
+    name: "Gnaoua sample 3",
+    singer: 'waveGAN\'s music',
+    cover:
+      'https://i.pinimg.com/736x/23/87/95/238795d126e72d3ef0fcb17500fd6753.jpg',
+    musicSrc:
+      'https://ggm.mhannani.codes/assets/generated_audios/generated_3.wav',
+  },
+    {
+    name: "Gnaoua sample 4",
+    singer: 'waveGAN\'s music',
+    cover:
+      'https://i.pinimg.com/736x/23/87/95/238795d126e72d3ef0fcb17500fd6753.jpg',
+    musicSrc:
+      'https://ggm.mhannani.codes/assets/generated_audios/generated_4.wav',
+  },
+    {
+    name: "Gnaoua sample 5",
+    singer: 'waveGAN\'s music',
+    cover:
+      'https://i.pinimg.com/736x/23/87/95/238795d126e72d3ef0fcb17500fd6753.jpg',
+    musicSrc:
+      'https://ggm.mhannani.codes/assets/generated_audios/generated_5.wav',
+  },
+    {
+    name: "Gnaoua sample 6",
+    singer: 'waveGAN\'s music',
+    cover:
+      'https://i.pinimg.com/736x/23/87/95/238795d126e72d3ef0fcb17500fd6753.jpg',
+    musicSrc:
+      'https://ggm.mhannani.codes/assets/generated_audios/generated_6.wav',
+  },
+    {
+    name: "Gnaoua sample 7",
+    singer: 'waveGAN\'s music',
+    cover:
+      'https://i.pinimg.com/736x/23/87/95/238795d126e72d3ef0fcb17500fd6753.jpg',
+    musicSrc:
+      'https://ggm.mhannani.codes/assets/generated_audios/generated_7.wav',
   },
 ]
 
@@ -380,4 +428,5 @@ MusicComponent.propTypes = {
      * The ID used to identify this component in Dash callbacks.
      */
     id: PropTypes.string,
+    audioLists: PropTypes.array,
 };
