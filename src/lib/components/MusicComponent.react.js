@@ -68,7 +68,7 @@ const audioList1 = [
 
 const options = {
   // audio lists model
-  audioLists: audioList1,
+  // audioLists: audioList1,
 
   // default play index of the audio player  [type `number` default `0`]
   defaultPlayIndex: 0,
@@ -413,20 +413,30 @@ const options = {
 
 export default class MusicComponent extends Component {
     render() {
+      const {id, audios} = this.props;
+      console.log(audios)
+      console.log(']]]]]]]')
+      console.log(id)
+      const audio_list = Object.values(id)
+      console.log("id")
+      // console.log(audio_list)
         return (
             <div>
-                <ReactJkMusicPlayer {...options}/>,
+                {/*<h1>{id}</h1>*/}
+                {/*<h3>{audios}</h3>*/}
+                <ReactJkMusicPlayer audioLists={audios} {...options}/>,
             </div>
         );
     }
 }
 
-MusicComponent.defaultProps = {};
+MusicComponent.defaultProps = {audios: audioList1};
 
 MusicComponent.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks.
      */
     id: PropTypes.string,
-    audioLists: PropTypes.array,
+    audios: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired
+
 };
