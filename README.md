@@ -1,4 +1,4 @@
-# ggm 
+# ggm - Generate Gnaoua Music
 
 
 ggm - Generate Gnaoua Music 
