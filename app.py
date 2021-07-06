@@ -13,7 +13,7 @@ app = dash.Dash(__name__)
 i_list = [94, 69, 101, 125, 138, 141, 169, 263, 396, 478, 543, 735, 1011, 1185, 1200, 1254, 1472, 1563, 1638,
           1688, 1894, 1935, 2164, 2267, 2272, 2332, 2373, 2513, 2537, 2573, 2948, 2955, 2975, 2983, 3011, 3018]
 audioList1 = [{
-    "name": f"Gnaoua sample {i}",
+    "name": f"Gnaoua sample epoch - {i}",
     "singer": 'waveGAN\'s music',
     "cover":
       'https://i.pinimg.com/736x/23/87/95/238795d126e72d3ef0fcb17500fd6753.jpg',
@@ -290,7 +290,7 @@ for stylesheet in stylesheets:
 
 if __name__ == '__main__':
     # for deployment
-    # app.run_server(host='0.0.0.0', port=8080, debug=False, use_reloader=False)
+    app.run_server(host='0.0.0.0', port=8080, debug=False, use_reloader=False)
 
     # for production
-    app.run_server(debug=True)
+    # app.run_server(debug=True)
