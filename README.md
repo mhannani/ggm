@@ -3,10 +3,6 @@
 
 ![screenshots](./assets/screenshots/screenshots.png)
 
-Get started with:
-2. Run `python app.py`
-3. Visit http://localhost:8050 in your web browser
-
 ### Install dependencies
 
 1. Install npm packages
