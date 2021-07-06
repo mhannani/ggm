@@ -18,7 +18,7 @@ audioList1 = [{
     "cover":
       'https://i.pinimg.com/736x/23/87/95/238795d126e72d3ef0fcb17500fd6753.jpg',
     "musicSrc":
-      f'https://ggm.mhannani.codes/assets/generated_audios/epoch - {j}.wav',
+      f'https://ggm.mhannani.codes/assets/generated_audios/epoch-{j}.wav',
   } for i, j in zip(i_list, i_list)
 ]
 
