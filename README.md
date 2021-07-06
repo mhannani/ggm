@@ -1,7 +1,7 @@
 # ggm - Generate Gnaoua Music
 
 
-ggm - Generate Gnaoua Music 
+![screenshots](assets/screenshots/screenshots.png)
 
 Get started with:
 2. Run `python app.py`
