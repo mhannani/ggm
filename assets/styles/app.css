@@ -16,7 +16,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3px 15% 5px 2%;
+  padding: 0 15% 0 2%;
 }
 
 .logo{
@@ -163,4 +163,22 @@ button:hover{
   transform: rotate(-45deg);
 }
 
-/*# sourceMappingURL=app.css.map */
+/* background */
+/*.bg{*/
+/*  background: url("https://64.media.tumblr.com/tumblr_m40wmw84ts1qjvq2wo1_500.jpg") no-repeat, no-repeat;*/
+
+/*}*/
+
+/*.container{*/
+/*  display: grid;*/
+/*  grid-gap: 3px;*/
+/*  grid-template-columns: repeat(25, 1fr);*/
+/*}*/
+
+/*.container div{*/
+/*  height: 50px;*/
+/*  width: 50px;*/
+/*  background-size: cover;*/
+/*  background-attachment: fixed;*/
+
+/*}*/
