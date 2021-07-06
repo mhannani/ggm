@@ -1,5 +1,58 @@
-body{
-  background: #ece7e7;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* ======== HEADER ======== */
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+li, a, button {
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 15% 5px 2%;
+}
+
+.logo{
+  cursor: auto;
+  height: 60px;
+}
+
+.nav__links{
+  list-style: none;
+}
+
+.nav li{
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav li a:hover {
+  color: #0088a9;
+}
+
+button{
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: rgba(0, 136, 169, 0.8);
+
 }
 
 .github-fork-ribbon {

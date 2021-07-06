@@ -69,6 +69,19 @@ audioList1 = [{
 ]
 
 app.layout = html.Div([
+    html.Header(className='header', children=[
+        html.Img(className="logo", src="./assets/logo/logo_2.svg"),
+        html.Nav(className='nav', children=[
+            html.Ul(children=[
+                html.Li(children=[
+                    html.A("Paper used", href="https://arxiv.org/pdf/1802.04208.pdf")
+                ]),
+                html.Li(children=[
+                    html.A("Article", href="https://blog.mhannani.codes/ggm-under-the-hood")
+                ]),
+            ])
+        ]),
+    ]),
     music_component.MusicComponent(id="custom-component", audios=audioList1),
     html.Div(id='output'),
     html.A(
@@ -96,7 +109,7 @@ for stylesheet in stylesheets:
 
 if __name__ == '__main__':
     # for deployment
-    # app.run_server(host='0.0.0.0', port=8080, debug=False, use_reloader=False)
+    app.run_server(host='0.0.0.0', port=8080, debug=False, use_reloader=False)
 
     # for production
-    app.run_server(debug=True)
+    # app.run_server(debug=True)
