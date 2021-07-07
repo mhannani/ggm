@@ -11,7 +11,6 @@ def sample_buffer(buffer_data, start_idx=None, end_idx=None):
     :return: the sampled buffer
     """
 
-    # divide the audio into 4 buffer.
     audio_len = len(buffer_data) // 4
 
     if audio_len == WINDOW_LENGTH:
