@@ -1,7 +1,7 @@
 import librosa
 import numpy as np
-from .consts import LOGGER
-from .consts import WINDOW_LENGTH
+from .. .consts import LOGGER
+from .. .consts import WINDOW_LENGTH
 
 
 def load_wav(wav_file_path, normalize_audio=True):

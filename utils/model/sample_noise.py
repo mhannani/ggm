@@ -7,5 +7,5 @@ def sample_noise(size):
     z = torch.FloatTensor(size, 100).to(torch.device("cpu"))
 
     # compute the normal distribution of the latent space
-    z.data.normal_()  # generating latent space based on normal distribution
+    z.data.normal_()
     return z
