@@ -23,10 +23,20 @@ class WaveLoader:
         self.initialize_iterator()
 
     def initialize_iterator(self):
+        """
+        Create am iterator
+        :return:
+        """
+
         data_iter = audio_stream_sampling(self.audio_paths)
         self.data_iter = iter(data_iter)
 
     @staticmethod
     def numpy_to_tensor(numpy_array):
+        """
+        Convert a numoy array to tensor.
+        :param numpy_array: ndarray arrray
+        :return: tensor
+        """
         numpy_array = numpy_array[:, np.newaxis, :]
         return torch.Tensor(numpy_array).to(torch.device("cpu"))
