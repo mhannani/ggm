@@ -7,9 +7,10 @@ import matplotlib.pyplot as plt
 def visualize_audio(audio_tensor):
     """
     Takes an audio tensor and display its spectrogram representation
-    :param audio_tensor:
-    :return:
+    :param audio_tensor: an audio tensor.
+    :return: None
     """
+
     # detach the audio tensor from the graph(so no gradient required) and copy the resulting tensor
     # to the cpu memory and convert it into numpy ndarray.
     input_audios = audio_tensor.detach().cpu().numpy()
