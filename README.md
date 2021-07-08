@@ -8,5 +8,5 @@ GANSynth is a state-of-the-art method for synthesizing high-fidelity and locally
 
 
 ### Resources used
-
+#### inspired from: https://github.com/auroracramer/wavegan 
 1. https://support.ircam.fr/docs/AudioSculpt/3.0/co/Window%20Size.html
