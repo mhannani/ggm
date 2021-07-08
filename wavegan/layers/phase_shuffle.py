@@ -1,6 +1,7 @@
 import torch
 import torch.nn.functional as f
 
+
 class PhaseShuffle(torch.nn.Module):
     """
     Performs phase shuffling, i.e. shifting feature axis of a 3D tensor

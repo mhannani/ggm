@@ -1,8 +1,9 @@
+from .phase_shuffle import PhaseShuffle
 from torch import nn
 import torch.nn.functional as f
 
 
-class Conv1d(nn.Module):
+class Conv1dLeakyReluPhaseShuffle(nn.Module):
     def __init__(
         self,
         in_channels,
@@ -14,7 +15,7 @@ class Conv1d(nn.Module):
         padding=11,
     ):
 
-        super(Conv1d, self).__init__()
+        super(Conv1dLeakyReluPhaseShuffle, self).__init__()
         self.conv1d = nn.Conv1d(
             in_channels, out_channels, kernel_size, stride=stride, padding=padding
         )
