@@ -2,7 +2,7 @@ from torch import nn
 import torch.functional as f
 
 
-class Transpose1dLayer(nn.Module):
+class ConvTranspose1d(nn.Module):
     def __init__(
         self,
         input_channels,
@@ -12,7 +12,7 @@ class Transpose1dLayer(nn.Module):
         padding=11,
         output_padding=1,
     ):
-        super(Transpose1dLayer, self).__init__()
+        super(ConvTranspose1d, self).__init__()
         reflection_pad = nn.ConstantPad1d(kernel_size // 2, value=0)
         conv1d = nn.Conv1d(input_channels, output_channels, kernel_size, stride)
         operation_list = [reflection_pad, conv1d]
