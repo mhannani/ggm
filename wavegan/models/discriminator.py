@@ -55,7 +55,7 @@ class Discriminator(nn.Module):
 
     # forward pass
     def forward(self, x):
-        for conv in self.conv_layers:
+        for conv in self.convolutional_layers:
             x = conv(x)
         x = x.view(-1, self.fc_input_size)
 

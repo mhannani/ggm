@@ -1,9 +1,9 @@
 import os
 from .consts import *
-from .utils.audio import *
+from ..utils.audio import *
 from .discriminator import Discriminator
 from .generator import Generator
-from .utils import *
+from ..utils import *
 import torch.optim as optim
 import torch
 from torch.autograd import grad, Variable

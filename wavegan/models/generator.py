@@ -48,7 +48,7 @@ class Generator(nn.Module):
             ) for i, j in zip(input_channels_iter, output_channels_iter)
         ]
 
-        deconvolution_layers_list = nn.ModuleList(deconvolution_layers)
+        self.deconvolution_layers_list = nn.ModuleList(deconvolution_layers)
 
     def forward(self, x):
         x = self.fc1(x).view(-1, self.dim_mul * self.model_size, 16)
@@ -57,7 +57,7 @@ class Generator(nn.Module):
         for deconv_layer in self.deconvolution_layers_list[:-1]:
             x = f.relu(deconv_layer(x))
 
-        output = torch.tanh(self.deconv_list[-1](x))
+        output = torch.tanh(self.deconvolution_layers_list[-1](x))
         return output
 
 

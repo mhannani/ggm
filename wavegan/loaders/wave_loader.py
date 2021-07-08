@@ -31,6 +31,13 @@ class WaveLoader:
         data_iter = audio_stream_sampling(self.audio_paths)
         self.data_iter = iter(data_iter)
 
+    def __len__(self):
+        return len(self.audio_paths)
+
+    def __next__(self):
+        x = next(self.data_iter)
+        return self.numpy_to_tensor(x["single"])
+
     @staticmethod
     def numpy_to_tensor(numpy_array):
         """

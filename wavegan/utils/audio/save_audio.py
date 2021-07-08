@@ -1,7 +1,7 @@
 import os
 import librosa
-from ..make_path import make_path
-from ..consts import OUTPUT_DIR
+from .make_path import make_path
+from .consts import OUTPUT_DIR
 
 
 def save_audio(samples, epoch):

@@ -1,5 +1,5 @@
 import numpy as np
-from ..consts import WINDOW_LENGTH
+from ..models.consts import WINDOW_LENGTH
 
 
 def sample_buffer(buffer_data, start_idx=None, end_idx=None):

@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 from .sample_noise import sample_noise
-from ..visualize import visualize_audio
+from .visualize import visualize_audio
 
 
 def interpolate_latent_space(model, n_samples=2):

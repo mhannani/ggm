@@ -1,9 +1,7 @@
 import logging
 
-WINDOW_LENGTH = 65536
-SAMPLING_RATE = 16000
 BATCH_SIZE = 10
-OUTPUT_DIR = 'output_directory'
+WINDOW_LENGTH = 65536
 LOGGER = logging.getLogger('wavegan')
 LOGGER.setLevel(logging.DEBUG)
-
+OUTPUT_DIR = 'output_directory'

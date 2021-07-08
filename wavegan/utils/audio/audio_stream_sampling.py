@@ -1,6 +1,6 @@
 import pescador
 from .sample_generator import sample_generator
-from ..consts import BATCH_SIZE
+from .consts import BATCH_SIZE
 
 
 def audio_stream_sampling(file_path_list):

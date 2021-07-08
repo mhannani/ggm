@@ -1,5 +1,5 @@
 import numpy as np
-from .. .consts import WINDOW_LENGTH
+from .consts import WINDOW_LENGTH
 
 
 def sample_audio(audio_data, start_index=None, end_index=None):
