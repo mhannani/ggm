@@ -15,10 +15,6 @@ class Transpose1dLayer(nn.Module):
         super(Transpose1dLayer, self).__init__()
         reflection_pad = nn.ConstantPad1d(kernel_size // 2, value=0)
         conv1d = nn.Conv1d(input_channels, output_channels, kernel_size, stride)
-        conv1d.weight.data.normal_(0.0, 0.02)
-        conv1d_transpose = nn.ConvTranspose1d(
-            input_channels, output_channels, kernel_size, stride, padding, output_padding
-        )
         operation_list = [reflection_pad, conv1d]
         self.transpose_ops = nn.Sequential(*operation_list)
 

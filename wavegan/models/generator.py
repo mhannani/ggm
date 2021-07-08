@@ -19,7 +19,7 @@ class Generator(nn.Module):
         self.num_channels = num_channels  # c
         self.latent_dim = 100
         self.dim_mul = 16
-        self.up_sample = 4,
+        self.up_sample = True,
         self.stride = 4
         self.fc1 = nn.Linear(self.latent_dim, 4 * 4 * model_size * self.dim_mul)
 
