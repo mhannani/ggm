@@ -6,3 +6,4 @@ BATCH_SIZE = 10
 OUTPUT_DIR = 'output_directory'
 LOGGER = logging.getLogger('wavegan')
 LOGGER.setLevel(logging.DEBUG)
+

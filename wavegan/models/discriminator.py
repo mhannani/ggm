@@ -14,11 +14,9 @@ class Discriminator(nn.Module):
         num_channels=1,
         shuffle_factor=2,
         alpha=0.2,
-        use_batch_norm=False
     ):
         super(Discriminator, self).__init__()
         self.model_size = model_size
-        self.use_batch_norm = use_batch_norm
         self.num_channels = num_channels
         self.shift_factor = shuffle_factor
         self.alpha = alpha
