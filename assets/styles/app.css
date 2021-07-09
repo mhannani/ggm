@@ -3,6 +3,7 @@
 /* ======== HEADER ======== */
 * {
   font-family: "Montserrat", sans-serif;
+  margin: 0;
 }
 
 li, a, button {
@@ -24,8 +25,8 @@ header li a {
 }
 .logo{
   cursor: auto;
-  height: 60px;
-  color: white;
+  height: 80px;
+
 }
 
 .nav__links{
