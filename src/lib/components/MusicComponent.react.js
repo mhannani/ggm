@@ -133,7 +133,7 @@ const options = {
   // if you want dynamic change current play mode you can change it
   // [type`order | orderLoop | singleLoop | shufflePlay`, default `order`]
   // playMode: 'order',
-  defaultPlayMode: 'order',
+  defaultPlayMode: 'singleLoop',
 
   // audio mode        mini | full          [type `String`  default `mini`]
   mode: 'full',
