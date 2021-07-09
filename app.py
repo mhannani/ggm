@@ -6,7 +6,7 @@ import flask
 
 # serving local files
 css_directory = os.getcwd()
-stylesheets = ['app.css']
+stylesheets = ['app.scss']
 static_css_route = '/assets/'
 
 app = dash.Dash(__name__)

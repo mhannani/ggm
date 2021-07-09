@@ -18,10 +18,14 @@ header{
   align-items: center;
   padding: 0 15% 0 2%;
 }
-
+header li a {
+  color: white;
+  font-weight: bold;
+}
 .logo{
   cursor: auto;
   height: 60px;
+  color: white;
 }
 
 .nav__links{
@@ -164,10 +168,10 @@ button:hover{
 }
 
 /* background */
-/*.bg{*/
-/*  background: url("https://64.media.tumblr.com/tumblr_m40wmw84ts1qjvq2wo1_500.jpg") no-repeat, no-repeat;*/
+body{
+  background: url("https://i.pinimg.com/originals/ee/40/e3/ee40e3437c5bc24cb7e609eaae39132a.jpg") repeat;
 
-/*}*/
+}
 
 /*.container{*/
 /*  display: grid;*/
