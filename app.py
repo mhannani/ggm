@@ -5,9 +5,9 @@ import os
 import flask
 
 # serving local files
-css_directory = os.getcwd()
-stylesheets = ['app.scss']
-static_css_route = '/assets/'
+# css_directory = os.getcwd()
+# stylesheets = ['app.scss']
+# static_css_route = '/assets/'
 
 app = dash.Dash(__name__)
 app.title = 'ggm'
@@ -48,19 +48,19 @@ app.layout = html.Div([
 ])
 
 
-@app.server.route('{}<stylesheet>'.format(static_css_route))
-def serve_stylesheet(style):
-    if style not in stylesheets:
-        raise Exception(
-            '"{}" is excluded from the allowed static files'.format(
-                style
-            )
-        )
-    return flask.send_from_directory(css_directory, style)
-
-
-for stylesheet in stylesheets:
-    app.css.append_css({"external_url": "/assets/{}".format(stylesheet)})
+# @app.server.route('{}<stylesheet>'.format(static_css_route))
+# def serve_stylesheet(style):
+#     if style not in stylesheets:
+#         raise Exception(
+#             '"{}" is excluded from the allowed static files'.format(
+#                 style
+#             )
+#         )
+#     return flask.send_from_directory(css_directory, style)
+#
+#
+# for stylesheet in stylesheets:
+#     app.css.append_css({"external_url": "/assets/{}".format(stylesheet)})
 
 if __name__ == '__main__':
     # for deployment
