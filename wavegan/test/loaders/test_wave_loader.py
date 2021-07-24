@@ -13,3 +13,9 @@ class TestWaveLoader(unittest.TestCase):
         self.valid_data_loader = self.cls(os.path.join(TARGET_SIGNALS_DIR, "valid"))
         print(f'There is {self.train_data_loader.__len__()} training files')
         print(f'There is {self.valid_data_loader.__len__()} validation files')
+
+        # create the audio stream and an iterator from it
+        self.train_data_loader.initialize_iterator()
+
+        # show the first element of the iterator
+        print("The first element of the iterator: ", self.train_data_loader.__next__())
