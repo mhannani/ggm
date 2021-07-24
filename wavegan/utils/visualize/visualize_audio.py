@@ -1,12 +1,14 @@
 import os
-import librosa
+import librosa.display
 import numpy as np
 import matplotlib.pyplot as plt
+from .. consts import SAMPLING_RATE
 
 
-def visualize_audio(audio_tensor):
+def visualize_audio(audio_tensor, is_monphonic=False):
     """
     Takes an audio tensor and display its spectrogram representation
+    :param is_monphonic:
     :param audio_tensor: an audio tensor.
     :return: None
     """
@@ -21,12 +23,16 @@ def visualize_audio(audio_tensor):
     # construct the representation
     for i, audio in enumerate(input_audios):
         plt.subplot(10, 2, i + 1)
-
-        # Convert an amplitude spectrogram to dB-scaled spectrogram.
-        db = librosa.amplitude_to_db(np.abs(librosa.stft(audio[0])), ref=np.max)
-        librosa.display.specshow(db, y_axis="linear")
-        plt.colorbar(format="%+2.0f dB")
-        plt.title("Linear frequency spectrogram %i" % (i + 1))
+        if is_monphonic:
+            print('Got executed')
+            plt.title("Monophonic %i" % (i + 1))
+            librosa.display.waveplot(audio[0], sr=SAMPLING_RATE)
+        else:
+            # Convert an amplitude spectrogram to dB-scaled spectrogram.
+            db = librosa.amplitude_to_db(np.abs(librosa.stft(audio[0])), ref=np.max)
+            librosa.display.specshow(db, y_axis="linear")
+            plt.colorbar(format="%+2.0f dB")
+            plt.title("Linear frequency spectrogram %i" % (i + 1))
 
     # create visualization folder if not already exist.
     if not (os.path.isdir("../../visualization")):

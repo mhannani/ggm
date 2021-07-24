@@ -1,6 +1,6 @@
 import unittest
 from os import path
-from utils import get_recursive_files
+from .. import get_recursive_files
 
 FOLDER_PATH = './waves'
 EXT = 'wav'
