@@ -6,7 +6,7 @@ from .visualize import visualize_audio
 
 def interpolate_latent_space(model, n_samples=2):
     """
-    Laten space
+    Latent space interpolation
     :param model: nn.Model instance
     :param n_samples: number of sample to generate.
     :return: None
@@ -33,5 +33,5 @@ def interpolate_latent_space(model, n_samples=2):
         # generate sample from the interpolated vector/tensor.
         generated_audio = model(interpolated)
 
-    # visualize the spectrogram of the new audio generated
+    # save the spectrogram of the new audio generated
     visualize_audio(generated_audio)

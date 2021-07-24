@@ -13,7 +13,7 @@ class WaveLoader:
         """
         The constructor of the class
         :param folder_path: string
-            the training fodler path.
+            the training folder path.
         :param audio_extension: string
             audio extension
         """
@@ -24,7 +24,7 @@ class WaveLoader:
 
     def initialize_iterator(self):
         """
-        Create am iterator
+        Create an iterator
         :return:
         """
 
@@ -34,6 +34,9 @@ class WaveLoader:
     def __len__(self):
         return len(self.audio_paths)
 
+    def __iter__(self):
+        return self
+
     def __next__(self):
         x = next(self.data_iter)
         return self.numpy_to_tensor(x["single"])
@@ -41,8 +44,8 @@ class WaveLoader:
     @staticmethod
     def numpy_to_tensor(numpy_array):
         """
-        Convert a numoy array to tensor.
-        :param numpy_array: ndarray arrray
+        Convert a numpy array to tensor.
+        :param numpy_array: ndarray array
         :return: tensor
         """
         numpy_array = numpy_array[:, np.newaxis, :]
