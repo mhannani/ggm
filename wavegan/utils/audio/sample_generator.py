@@ -12,4 +12,5 @@ def sample_generator(file_path):
 
     audio_data = load_wav(file_path)
     while True:
-        yield {"single": sample_audio(audio_data)}
+        sample, _, _ = sample_audio(audio_data)
+        yield {"single": sample}

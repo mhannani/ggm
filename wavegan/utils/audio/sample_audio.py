@@ -5,7 +5,7 @@ from .. consts import WINDOW_LENGTH
 def sample_audio(audio_data, start_index=None, end_index=None):
     """
     Sample a window from an audio if its length is greater then the windows length, the audio its self
-    if its lenght is the same as the window length.
+    if its length is the same as the window length.
 
     :param audio_data: an audio as array
     :param start_index: start index if provided
@@ -27,4 +27,4 @@ def sample_audio(audio_data, start_index=None, end_index=None):
         sample = audio_data[start_index:end_index]
     sample = sample.astype("float32")
 
-    return sample
+    return sample, start_index, end_index

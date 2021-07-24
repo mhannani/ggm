@@ -5,6 +5,7 @@ from .. import load_wav
 WAV_FILE_PATH = './waves/train/out_3_000.wav'
 NORMALIZE_AUDIO = True
 
+
 class TestLoadWav(unittest.TestCase):
     def setUp(self):
         self.func = load_wav

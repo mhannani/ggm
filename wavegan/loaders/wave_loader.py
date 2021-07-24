@@ -49,4 +49,5 @@ class WaveLoader:
         :return: tensor
         """
         numpy_array = numpy_array[:, np.newaxis, :]
+        print(type(numpy_array[0]))
         return torch.Tensor(numpy_array).to(torch.device("cpu"))
