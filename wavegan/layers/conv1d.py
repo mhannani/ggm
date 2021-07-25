@@ -12,7 +12,7 @@ class Conv1dLeakyReluPhaseShuffle(nn.Module):
         alpha=0.2,
         shift_factor=2,
         stride=([4, ], ),
-        padding=11,
+        padding=([11, ], ),
         use_batch_norm=False,
         drop_prob=0,
     ):
@@ -31,7 +31,11 @@ class Conv1dLeakyReluPhaseShuffle(nn.Module):
 
     def forward(self, x):
         x = self.conv1d(x)
+        if self.use_batch_norm:
+            x = self.batch_norm(x)
         x = f.leaky_relu(x, negative_slope=self.alpha)
         if self.use_phase_shuffle:
             x = self.phase_shuffle(x)
+        if self.use_drop:
+            x = self.dropout(x)
         return x

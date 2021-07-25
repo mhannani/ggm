@@ -12,7 +12,7 @@ class ConvTranspose1d(nn.Module):
         stride=([4, ], ),
         padding=([11, ], ),
         upsample=None,
-        output_padding=(1, ),
+        output_padding=([1, ], ),
         use_batch_norm=False,
     ):
         super(ConvTranspose1d, self).__init__()

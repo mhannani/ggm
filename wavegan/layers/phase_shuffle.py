@@ -1,15 +1,16 @@
 import torch
-import torch.nn.functional as f
+import torch.nn as nn
+import torch.nn.functional as F
 
 
-class PhaseShuffle(torch.nn.Module):
+class PhaseShuffle(nn.Module):
     """
     Performs phase shuffling, i.e. shifting feature axis of a 3D tensor
     by a random integer in {-n, n} and performing reflection padding where
     necessary.
-    # Copied from https://github.com/jtcramer/wavegan/blob/master/wavegan.py#L8
     """
 
+    # Copied from https://github.com/jtcramer/wavegan/blob/master/wavegan.py#L8
     def __init__(self, shift_factor):
         super(PhaseShuffle, self).__init__()
         self.shift_factor = shift_factor
@@ -37,11 +38,11 @@ class PhaseShuffle(torch.nn.Module):
         x_shuffle = x.clone()
 
         # Apply shuffle to each sample
-        for k, indices in k_map.items():
+        for k, idxs in k_map.items():
             if k > 0:
-                x_shuffle[indices] = f.pad(x[indices][..., :-k], (k, 0), mode="reflect")
+                x_shuffle[idxs] = F.pad(x[idxs][..., :-k], (k, 0), mode="reflect")
             else:
-                x_shuffle[indices] = f.pad(x[indices][..., -k:], (0, -k), mode="reflect")
+                x_shuffle[idxs] = F.pad(x[idxs][..., -k:], (0, -k), mode="reflect")
 
         assert x_shuffle.shape == x.shape, "{}, {}".format(x_shuffle.shape, x.shape)
         return x_shuffle
