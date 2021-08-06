@@ -33,7 +33,7 @@ app.layout = html.Div([
                     html.A("Paper used", href="https://arxiv.org/pdf/1802.04208.pdf")
                 ]),
                 html.Li(children=[
-                    html.A("Article", href="https://blog.mhannani.codes/posts/ggm-under-the-hood/")
+                    html.A("Article", href="https://blog.mhannani.com/posts/ggm-under-the-hood/")
                 ]),
             ])
         ]),
